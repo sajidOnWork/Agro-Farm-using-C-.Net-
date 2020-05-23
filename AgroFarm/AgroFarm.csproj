@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BEBD5AC-A72C-44B8-A7D9-F01C2AE75635}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AgroFarm</RootNamespace>
+    <AssemblyName>AgroFarm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>217-2179368_leaf-leaf-for-logo-pnxscag-clipart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeInfo.Designer.cs">
+      <DependentUpon>AddEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPesticideDetails.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AddPesticideDetails.Designer.cs">
+      <DependentUpon>AddPesticideDetails.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="AddFertilizerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFertilizerDetails.Designer.cs">
+      <DependentUpon>AddFertilizerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFoodDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFoodDetail.Designer.cs">
+      <DependentUpon>AddFoodDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUser.Designer.cs">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSeedDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSeedDetails.Designer.cs">
+      <DependentUpon>AddSeedDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTransaction.Designer.cs">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTreatmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTreatmentInfo.Designer.cs">
+      <DependentUpon>AddTreatmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddWarehouseStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWarehouseStatus.Designer.cs">
+      <DependentUpon>AddWarehouseStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeInformation.Designer.cs">
+      <DependentUpon>EmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FertilierReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FertilierReport.Designer.cs">
+      <DependentUpon>FertilierReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoodReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodReport.Designer.cs">
+      <DependentUpon>FoodReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesticideReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PesticideReport.Designer.cs">
+      <DependentUpon>PesticideReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports Owner.Designer.cs">
+      <DependentUpon>Reports Owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeedReport.Designer.cs">
+      <DependentUpon>SeedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionReport.Designer.cs">
+      <DependentUpon>TransactionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentInformationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreatmentInformationReport.Designer.cs">
+      <DependentUpon>TreatmentInformationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserReport.Designer.cs">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseStatusReport.Designer.cs">
+      <DependentUpon>WarehouseStatusReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployeeInfo.resx">
+      <DependentUpon>AddEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPesticideDetails.resx">
+      <DependentUpon>AddPesticideDetails.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFertilizerDetails.resx">
+      <DependentUpon>AddFertilizerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFoodDetail.resx">
+      <DependentUpon>AddFoodDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewUser.resx">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSeedDetails.resx">
+      <DependentUpon>AddSeedDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTransaction.resx">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTreatmentInfo.resx">
+      <DependentUpon>AddTreatmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWarehouseStatus.resx">
+      <DependentUpon>AddWarehouseStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeInformation.resx">
+      <DependentUpon>EmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FertilierReport.resx">
+      <DependentUpon>FertilierReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodReport.resx">
+      <DependentUpon>FoodReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesticideReport.resx">
+      <DependentUpon>PesticideReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports Owner.resx">
+      <DependentUpon>Reports Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeedReport.resx">
+      <DependentUpon>SeedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionReport.resx">
+      <DependentUpon>TransactionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreatmentInformationReport.resx">
+      <DependentUpon>TreatmentInformationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserReport.resx">
+      <DependentUpon>UserReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseStatusReport.resx">
+      <DependentUpon>WarehouseStatusReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="217-2179368_leaf-leaf-for-logo-pnxscag-clipart.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
